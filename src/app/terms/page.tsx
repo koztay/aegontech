@@ -15,7 +15,7 @@ export default function TermsPage() {
             
             <h2 className="text-2xl font-semibold text-foreground mt-8 mb-4">1. Acceptance of Terms</h2>
             <p className="text-secondary mb-4">
-              By accessing and using AegonTech's services, you agree to be bound by these Terms of Service. 
+              By accessing and using AegonTech&apos;s services, you agree to be bound by these Terms of Service. 
               If you disagree with any part of the terms, you may not access our services.
             </p>
             

@@ -71,7 +71,7 @@ export default function SupportPage() {
           <div className="mt-12 bg-card rounded-lg p-8 border">
             <h2 className="text-2xl font-semibold text-foreground mb-4">Contact Support</h2>
             <p className="text-secondary mb-6">
-              Can't find what you're looking for? Our support team is here to help.
+              Can&apos;t find what you&apos;re looking for? Our support team is here to help.
             </p>
             
             <div className="grid md:grid-cols-3 gap-4">

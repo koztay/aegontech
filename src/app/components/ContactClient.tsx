@@ -119,7 +119,7 @@ export default function ContactClient() {
               </span>
             </h1>
             <p className="text-xl md:text-2xl text-secondary mb-8 max-w-3xl mx-auto">
-              Ready to transform your business? Let's discuss your project and create a custom solution that drives real results.
+              Ready to transform your business? Let&apos;s discuss your project and create a custom solution that drives real results.
             </p>
           </motion.div>
         </div>
@@ -138,8 +138,8 @@ export default function ContactClient() {
             >
               <h2 className="text-3xl font-bold text-foreground mb-8">Contact Information</h2>
               <p className="text-secondary mb-8">
-                We're here to help you succeed. Reach out to us through any of the following channels, 
-                and we'll get back to you within 24 hours.
+                We&apos;re here to help you succeed. Reach out to us through any of the following channels, 
+                and we&apos;ll get back to you within 24 hours.
               </p>
 
               <div className="space-y-6">
@@ -197,7 +197,7 @@ export default function ContactClient() {
                   <CheckCircle className="w-16 h-16 text-green-500 mx-auto mb-4" />
                   <h3 className="text-2xl font-bold text-foreground mb-2">Thank You!</h3>
                   <p className="text-secondary">
-                    Your message has been sent successfully. We'll get back to you within 24 hours.
+                    Your message has been sent successfully. We&apos;ll get back to you within 24 hours.
                   </p>
                 </motion.div>
               ) : (

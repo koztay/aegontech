@@ -1,7 +1,7 @@
 "use client";
 
 import { motion } from "framer-motion";
-import { ArrowRight, CheckCircle, Code, Smartphone, Globe, Shield, Zap } from "lucide-react";
+import { ArrowRight, CheckCircle, Code, Smartphone, Globe, Shield } from "lucide-react";
 import Link from "next/link";
 
 export default function HomeClient() {
@@ -200,7 +200,7 @@ export default function HomeClient() {
               Ready to Get Started?
             </h2>
             <p className="text-xl text-secondary mb-8">
-              Let's discuss your project and create a custom solution that drives real results.
+              Let&apos;s discuss your project and create a custom solution that drives real results.
             </p>
             <Link
               href="/contact"

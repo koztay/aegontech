@@ -1,21 +1,46 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Neumorphic color palette */
+  --background: #e0e5ec;
+  --foreground: #2d3748;
+  --primary: #4a5568;
+  --secondary: #718096;
+  --accent: #4299e1;
+  --light-shadow: #ffffff;
+  --dark-shadow: #a3b1c6;
+  
+  /* Dark mode colors */
+  --dark-background: #1a202c;
+  --dark-foreground: #e2e8f0;
+  --dark-primary: #a0aec0;
+  --dark-secondary: #718096;
+  --dark-accent: #63b3ed;
+  --dark-light-shadow: #2d3748;
+  --dark-dark-shadow: #000000;
 }
 
 @theme inline {
   --color-background: var(--background);
   --color-foreground: var(--foreground);
+  --color-primary: var(--primary);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
+  --color-light-shadow: var(--light-shadow);
+  --color-dark-shadow: var(--dark-shadow);
   --font-sans: var(--font-geist-sans);
   --font-mono: var(--font-geist-mono);
 }
 
 @media (prefers-color-scheme: dark) {
   :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
+    --background: var(--dark-background);
+    --foreground: var(--dark-foreground);
+    --primary: var(--dark-primary);
+    --secondary: var(--dark-secondary);
+    --accent: var(--dark-accent);
+    --light-shadow: var(--dark-light-shadow);
+    --dark-shadow: var(--dark-dark-shadow);
   }
 }
 
@@ -23,4 +48,166 @@ body {
   background: var(--background);
   color: var(--foreground);
   font-family: Arial, Helvetica, sans-serif;
+  transition: all 0.3s ease;
+}
+
+/* Neumorphic utility classes */
+.neumorphic-flat {
+  background: var(--background);
+  box-shadow: 
+    8px 8px 16px var(--dark-shadow),
+    -8px -8px 16px var(--light-shadow);
+}
+
+.neumorphic-concave {
+  background: var(--background);
+  box-shadow: 
+    inset 8px 8px 16px var(--dark-shadow),
+    inset -8px -8px 16px var(--light-shadow);
+}
+
+.neumorphic-convex {
+  background: linear-gradient(145deg, var(--light-shadow), var(--dark-shadow));
+  box-shadow: 
+    8px 8px 16px var(--dark-shadow),
+    -8px -8px 16px var(--light-shadow);
+}
+
+.neumorphic-pressed {
+  background: var(--background);
+  box-shadow: 
+    inset 4px 4px 8px var(--dark-shadow),
+    inset -4px -4px 8px var(--light-shadow);
+}
+
+.neumorphic-emboss {
+  background: var(--background);
+  box-shadow: 
+    2px 2px 4px var(--dark-shadow),
+    -2px -2px 4px var(--light-shadow);
+}
+
+/* Responsive neumorphic sizes */
+@media (max-width: 768px) {
+  .neumorphic-flat {
+    box-shadow:
+      4px 4px 8px var(--dark-shadow),
+      -4px -4px 8px var(--light-shadow);
+  }
+  
+  .neumorphic-concave {
+    box-shadow:
+      inset 4px 4px 8px var(--dark-shadow),
+      inset -4px -4px 8px var(--light-shadow);
+  }
+  
+  .neumorphic-convex {
+    box-shadow:
+      4px 4px 8px var(--dark-shadow),
+      -4px -4px 8px var(--light-shadow);
+  }
+}
+
+/* Additional responsive utilities */
+@media (max-width: 640px) {
+  .neumorphic-flat {
+    box-shadow:
+      2px 2px 4px var(--dark-shadow),
+      -2px -2px 4px var(--light-shadow);
+  }
+  
+  .neumorphic-concave {
+    box-shadow:
+      inset 2px 2px 4px var(--dark-shadow),
+      inset -2px -2px 4px var(--light-shadow);
+  }
+  
+  .neumorphic-convex {
+    box-shadow:
+      2px 2px 4px var(--dark-shadow),
+      -2px -2px 4px var(--light-shadow);
+  }
+}
+
+/* Smooth scrolling */
+html {
+  scroll-behavior: smooth;
+}
+
+/* Focus styles for accessibility */
+*:focus {
+  outline: 2px solid var(--accent);
+  outline-offset: 2px;
+}
+
+/* Custom scrollbar */
+::-webkit-scrollbar {
+  width: 8px;
+}
+
+::-webkit-scrollbar-track {
+  background: var(--background);
+}
+
+::-webkit-scrollbar-thumb {
+  background: var(--accent);
+  border-radius: 4px;
+}
+
+::-webkit-scrollbar-thumb:hover {
+  background: var(--primary);
+}
+
+/* Loading animation */
+@keyframes pulse {
+  0%, 100% {
+    opacity: 1;
+  }
+  50% {
+    opacity: 0.5;
+  }
+}
+
+.animate-pulse {
+  animation: pulse 2s cubic-bezier(0.4, 0, 0.6, 1) infinite;
+}
+
+/* Fade in animation */
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+.animate-fadeIn {
+  animation: fadeIn 0.6s ease-out forwards;
+}
+
+/* Responsive text utilities */
+@media (max-width: 768px) {
+  .text-responsive {
+    font-size: clamp(1rem, 4vw, 1.5rem);
+  }
+  
+  .text-responsive-lg {
+    font-size: clamp(1.5rem, 6vw, 3rem);
+  }
+}
+
+/* Touch-friendly buttons */
+@media (max-width: 768px) {
+  button, .btn {
+    min-height: 44px;
+    min-width: 44px;
+  }
+}
+
+/* Prevent horizontal scroll on mobile */
+body {
+  overflow-x: hidden;
 }

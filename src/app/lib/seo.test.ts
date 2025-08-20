@@ -1,1 +1,0 @@
-// SEO configuration is properly typed and ready for use

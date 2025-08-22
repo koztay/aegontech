@@ -14,7 +14,7 @@ export default function Footer() {
                   <span className="text-white font-bold text-lg">A</span>
                 </div>
                 <span className="text-2xl font-bold bg-gradient-to-r from-blue-600 to-purple-600 bg-clip-text text-transparent">
-                  AegonTech
+                  AEGONTECH LLC
                 </span>
               </div>
               <p className="text-slate-600 dark:text-slate-400 text-base leading-relaxed mb-6 max-w-sm">
@@ -123,7 +123,7 @@ export default function Footer() {
                 </a>
                 <div className="flex items-start space-x-3 text-slate-600 dark:text-slate-400">
                   <MapPin className="w-5 h-5 mt-0.5" />
-                  <span className="text-base">San Francisco, CA</span>
+                  <span className="text-base">8 The Green STE B, Dover, DE 19901 United States</span>
                 </div>
               </div>
             </div>
@@ -134,7 +134,7 @@ export default function Footer() {
         <div className="border-t border-slate-200 dark:border-slate-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-slate-500 dark:text-slate-400 text-sm">
-              © 2024 AegonTech. All rights reserved. Built with Next.js & Tailwind CSS.
+              © 2024 AEGONTECH LLC. All rights reserved. Built with Next.js & Tailwind CSS.
             </p>
             <div className="flex items-center space-x-6">
               <Link href="/privacy" className="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 text-sm transition-colors">

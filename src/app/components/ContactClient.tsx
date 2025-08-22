@@ -71,8 +71,8 @@ export default function ContactClient() {
     {
       icon: MapPin,
       title: "Address",
-      value: "123 Tech Street, San Francisco, CA 94105",
-      href: "https://maps.google.com/?q=123+Tech+Street,+San+Francisco,+CA+94105"
+      value: "8 The Green STE B, Dover, DE 19901 United States",
+      href: "https://maps.google.com/?q=8+The+Green+STE+B,+Dover,+DE+19901+United+States"
     },
     {
       icon: Clock,

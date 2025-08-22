@@ -134,7 +134,7 @@ export default function Footer() {
         <div className="border-t border-slate-200 dark:border-slate-800 py-8">
           <div className="flex flex-col md:flex-row justify-between items-center space-y-4 md:space-y-0">
             <p className="text-slate-500 dark:text-slate-400 text-sm">
-              © 2024 AEGONTECH LLC. All rights reserved. Built with Next.js & Tailwind CSS.
+              © 2024 AEGONTECH LLC. All rights reserved.
             </p>
             <div className="flex items-center space-x-6">
               <Link href="/privacy" className="text-slate-500 dark:text-slate-400 hover:text-slate-700 dark:hover:text-slate-300 text-sm transition-colors">
